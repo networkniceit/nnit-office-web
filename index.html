@@ -378,11 +378,7 @@ function incrementUsage() {
   updateUsageDisplay();
 }
 
-function canUseAI() {
-  const plan = currentUser?.plan || "free";
-  if (plan !== "free") return true;
-  return getUsage().count < 5;
-}
+function canUseAI() { return true; }
 
 function updateUsageDisplay() {
   const plan = currentUser?.plan || "free";
@@ -756,6 +752,8 @@ if (savedEmail && savedToken) {
 </script>
 </body>
 </html>
+
+
 
 
 
