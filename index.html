@@ -358,8 +358,8 @@ function logout() {
 
 function openCheckout(plan) {
   const email = currentUser.email;
-  const url = plan === "pro"  PRO_LINK : BIZ_LINK;
-  const fullUrl = email && email !== "guest"  url + "prefilled_email=" + encodeURIComponent(email) : url;
+  const url = plan === "pro" ? PRO_LINK : BIZ_LINK;
+  const fullUrl = email && email !== "guest" ? url + "prefilled_email=" + encodeURIComponent(email) : url;
   window.open(fullUrl, "_blank");
   closeUpgradeModal();
   showToast("Complete payment then click Refresh Plan in your account menu!");
@@ -792,8 +792,8 @@ function logout() {
 
 function openCheckout(plan) {
   const email = currentUser.email;
-  const url = plan === "pro"  PRO_LINK : BIZ_LINK;
-  const fullUrl = email && email !== "guest"  url + "prefilled_email=" + encodeURIComponent(email) : url;
+  const url = plan === "pro" ? PRO_LINK : BIZ_LINK;
+  const fullUrl = email && email !== "guest" ? url + "prefilled_email=" + encodeURIComponent(email) : url;
   window.open(fullUrl, "_blank");
   closeUpgradeModal();
   showToast("Complete payment then click Refresh Plan in your account menu!");
@@ -1540,6 +1540,7 @@ if (savedEmail && savedToken) {
 </script>
 </body>
 </html>
+
 
 
 
