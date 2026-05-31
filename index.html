@@ -260,7 +260,7 @@ function switchAuthTab(tab) {
 }
 
 async function handleAuth(tab) {
-  tab = tab || (document.getElementById("tab-login").classList.contains("active")  "login" : "register");
+  tab = tab || (document.getElementById("tab-login").classList.contains("active") ? "login" : "register");
   const email = document.getElementById("auth-email").value.trim();
   const password = document.getElementById("auth-password").value;
   const confirm = document.getElementById("auth-confirm").value;
@@ -694,7 +694,7 @@ function switchAuthTab(tab) {
 }
 
 async function handleAuth(tab) {
-  tab = tab || (document.getElementById("tab-login").classList.contains("active")  "login" : "register");
+  tab = tab || (document.getElementById("tab-login").classList.contains("active") ? "login" : "register");
   const email = document.getElementById("auth-email").value.trim();
   const password = document.getElementById("auth-password").value;
   const confirm = document.getElementById("auth-confirm").value;
@@ -1540,6 +1540,7 @@ if (savedEmail && savedToken) {
 </script>
 </body>
 </html>
+
 
 
 
