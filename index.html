@@ -173,7 +173,7 @@ td{padding:6px 8px;border-bottom:1px solid var(--border);}
     <div style="display:flex;gap:8px;align-items:center">
       <div id="usage-display" style="font-size:11px;color:#7a8aaa;font-family:'DM Mono',monospace"></div>
       <button class="btn btn-warning btn-sm" onclick="showPage('pricing')">? Upgrade</button>
-      <button class="btn btn-secondary btn-sm" onclick="showApiModal()">?? API Key</button>
+      <button class="btn btn-secondary btn-sm" onclick="showApiModal()" style="display:none">?? API Key</button>
       <div class="user-avatar" id="user-avatar" onclick="showUserMenu()" title="Account">?</div>
     </div>
   </div>
@@ -756,6 +756,7 @@ if (savedEmail && savedToken) {
 </script>
 </body>
 </html>
+
 
 
 
