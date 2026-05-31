@@ -906,7 +906,7 @@ function renderPricing() {
 // ===================== HOME =====================
 function renderHome() {
   const plan = currentUser.plan || "free";
-  const remaining = plan === "free"  Math.max(0, 5 - getUsage().count) : "8";
+  const remaining = plan === "free" ? Math.max(0, 5 - getUsage().count) : "8";
   const tools = [
     {p:"ai-writer",i:"",c:"#3d7fff",n:"AI Writer",d:"Generate letters, reports, contracts"},
     {p:"ai-reader",i:"",c:"#00e5c0",n:"AI Reader",d:"Analyze and extract from documents"},
@@ -923,7 +923,7 @@ function renderHome() {
     {p:"barcode",i:"",c:"#64748b",n:"Barcode",d:"Generate CODE128 barcodes"},
   ];
   return `<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;flex-wrap:wrap;gap:12px">
-    <div><div class="section-title">NNIT Office Suite</div><div style="color:#7a8aaa;font-size:13px">13 professional tools powered by AI — Welcome back, ${currentUser.email === "guest"  "Guest" : (currentUser.email.split("@")[0] || "User")}!</div></div>
+    <div><div class="section-title">NNIT Office Suite</div><div style="color:#7a8aaa;font-size:13px">13 professional tools powered by AI — Welcome back, ${currentUser.email === "guest" ? "Guest" : (currentUser.email.split("@")[0] || "User")}!</div></div>
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;text-align:center;min-width:140px">
       <div style="font-size:28px;font-family:'Syne',sans-serif;font-weight:800;color:${plan==="free""#3d7fff":"#ffb830"}">${remaining}</div>
       <div style="font-size:11px;color:#7a8aaa;font-family:'DM Mono',monospace">${plan==="free""AI uses left today":"UNLIMITED"}</div>
@@ -1255,7 +1255,7 @@ function renderPricing() {
 // ===================== HOME =====================
 function renderHome() {
   const plan = currentUser.plan || "free";
-  const remaining = plan === "free"  Math.max(0, 5 - getUsage().count) : "8";
+  const remaining = plan === "free" ? Math.max(0, 5 - getUsage().count) : "8";
   const tools = [
     {p:"ai-writer",i:"",c:"#3d7fff",n:"AI Writer",d:"Generate letters, reports, contracts"},
     {p:"ai-reader",i:"",c:"#00e5c0",n:"AI Reader",d:"Analyze and extract from documents"},
@@ -1272,7 +1272,7 @@ function renderHome() {
     {p:"barcode",i:"",c:"#64748b",n:"Barcode",d:"Generate CODE128 barcodes"},
   ];
   return `<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;flex-wrap:wrap;gap:12px">
-    <div><div class="section-title">NNIT Office Suite</div><div style="color:#7a8aaa;font-size:13px">13 professional tools powered by AI — Welcome back, ${currentUser.email === "guest"  "Guest" : (currentUser.email.split("@")[0] || "User")}!</div></div>
+    <div><div class="section-title">NNIT Office Suite</div><div style="color:#7a8aaa;font-size:13px">13 professional tools powered by AI — Welcome back, ${currentUser.email === "guest" ? "Guest" : (currentUser.email.split("@")[0] || "User")}!</div></div>
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;text-align:center;min-width:140px">
       <div style="font-size:28px;font-family:'Syne',sans-serif;font-weight:800;color:${plan==="free""#3d7fff":"#ffb830"}">${remaining}</div>
       <div style="font-size:11px;color:#7a8aaa;font-family:'DM Mono',monospace">${plan==="free""AI uses left today":"UNLIMITED"}</div>
@@ -1540,6 +1540,7 @@ if (savedEmail && savedToken) {
 </script>
 </body>
 </html>
+
 
 
 
