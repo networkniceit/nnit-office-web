@@ -288,7 +288,7 @@ async function handleAuth(tab) {
       launchApp();
     }
   } catch(e) { errEl.textContent = "Connection error. Please try again."; errEl.style.display = "block"; }
-  document.getElementById("auth-btn").textContent = tab === "login"  "Sign In" : "Create Account";
+  document.getElementById("auth-btn").textContent = tab === "login" ? "Sign In" : "Create Account";
   document.getElementById("auth-btn").disabled = false;
 }
 
@@ -311,8 +311,8 @@ function updateUserUI() {
   const plan = currentUser.plan || "free";
   const avatar = document.getElementById("user-avatar");
   const userInfo = document.getElementById("user-info");
-  if (avatar) avatar.textContent = email === "guest"  "G" : email[0].toUpperCase();
-  if (userInfo) userInfo.textContent = email === "guest"  "Guest Mode" : email;
+  if (avatar) avatar.textContent = email === "guest" ? "G" : email[0].toUpperCase();
+  if (userInfo) userInfo.textContent = email === "guest" ? "Guest Mode" : email;
   const badge = document.getElementById("plan-badge");
   if (badge) {
     if (plan === "free") { badge.textContent = "FREE — 5 uses/day"; badge.style.color = "#3d7fff"; }
@@ -722,7 +722,7 @@ async function handleAuth(tab) {
       launchApp();
     }
   } catch(e) { errEl.textContent = "Connection error. Please try again."; errEl.style.display = "block"; }
-  document.getElementById("auth-btn").textContent = tab === "login"  "Sign In" : "Create Account";
+  document.getElementById("auth-btn").textContent = tab === "login" ? "Sign In" : "Create Account";
   document.getElementById("auth-btn").disabled = false;
 }
 
@@ -745,8 +745,8 @@ function updateUserUI() {
   const plan = currentUser.plan || "free";
   const avatar = document.getElementById("user-avatar");
   const userInfo = document.getElementById("user-info");
-  if (avatar) avatar.textContent = email === "guest"  "G" : email[0].toUpperCase();
-  if (userInfo) userInfo.textContent = email === "guest"  "Guest Mode" : email;
+  if (avatar) avatar.textContent = email === "guest" ? "G" : email[0].toUpperCase();
+  if (userInfo) userInfo.textContent = email === "guest" ? "Guest Mode" : email;
   const badge = document.getElementById("plan-badge");
   if (badge) {
     if (plan === "free") { badge.textContent = "FREE — 5 uses/day"; badge.style.color = "#3d7fff"; }
@@ -1540,6 +1540,7 @@ if (savedEmail && savedToken) {
 </script>
 </body>
 </html>
+
 
 
 
