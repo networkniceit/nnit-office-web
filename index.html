@@ -252,8 +252,8 @@ let currentUser = null;
 function switchAuthTab(tab) {
   document.getElementById("tab-login").classList.toggle("active", tab==="login");
   document.getElementById("tab-register").classList.toggle("active", tab==="register");
-  document.getElementById("confirm-field").style.display = tab==="register"  "block" : "none";
-  document.getElementById("auth-btn").textContent = tab==="login"  "Sign In" : "Create Account";
+  document.getElementById("confirm-field").style.display = tab==="register" ? "block" : "none";
+  document.getElementById("auth-btn").textContent = tab==="login" ? "Sign In" : "Create Account";
   document.getElementById("auth-error").style.display = "none";
   document.getElementById("auth-success").style.display = "none";
   document.getElementById("auth-btn").onclick = () => handleAuth(tab);
@@ -686,8 +686,8 @@ let currentUser = null;
 function switchAuthTab(tab) {
   document.getElementById("tab-login").classList.toggle("active", tab==="login");
   document.getElementById("tab-register").classList.toggle("active", tab==="register");
-  document.getElementById("confirm-field").style.display = tab==="register"  "block" : "none";
-  document.getElementById("auth-btn").textContent = tab==="login"  "Sign In" : "Create Account";
+  document.getElementById("confirm-field").style.display = tab==="register" ? "block" : "none";
+  document.getElementById("auth-btn").textContent = tab==="login" ? "Sign In" : "Create Account";
   document.getElementById("auth-error").style.display = "none";
   document.getElementById("auth-success").style.display = "none";
   document.getElementById("auth-btn").onclick = () => handleAuth(tab);
@@ -1540,6 +1540,7 @@ if (savedEmail && savedToken) {
 </script>
 </body>
 </html>
+
 
 
 
