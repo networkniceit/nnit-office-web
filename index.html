@@ -418,7 +418,7 @@ async function callAI(sys, user) {
   return data.result;
 }
 
-function renderPrinter(){return<div class="section-title">Printer</div><div class="section-sub">Print any document or web page</div>
+function renderPrinter(){return `<div class="section-title">Printer</div><div class="section-sub">Print any document or web page</div>
   <div class="panel"><div class="panel-header"><div class="panel-title">Print Options</div></div><div class="panel-body">
     <div class="field"><label>TITLE</label><input type="text" id="print-title" placeholder="Document title..."/></div>
     <div class="field"><label>CONTENT</label><textarea id="print-content" rows="15" placeholder="Paste or type content to print..."></textarea></div>
@@ -426,7 +426,7 @@ function renderPrinter(){return<div class="section-title">Printer</div><div clas
       <button class="btn btn-primary" onclick="printContent()">Print</button>
       <button class="btn btn-secondary" onclick="printAsPDF()">Save as PDF</button>
     </div>
-  </div></div>;}
+  </div></div>`;}
 
 function printContent(){
   const title = document.getElementById('print-title').value || 'Document';
@@ -1540,6 +1540,8 @@ if (savedEmail && savedToken) {
 </script>
 </body>
 </html>
+
+
 
 
 
